@@ -168,7 +168,7 @@ First you'll need these installed:
 ## Contributors <a name="team"></a>
 
   ### Frontend Team
-   ### [Edita Ignot](https://github.com/edignot) | [MY COMMITS](https://github.com/StreetArtMap/streetArtMap/commits/master?author=edignot)
+   ### [Edita Ignot](https://github.com/edignot) | [MY COMMITS](https://github.com/StreetArtMap/streetArtMap/commits/master?after=03485ade34c92e1eba5047ce69f0473778166856+34&author=edignot&branch=master)
 
    [Carlos Flores](https://github.com/carflor)
 
