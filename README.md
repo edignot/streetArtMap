@@ -49,17 +49,52 @@ This application was bootstrapped using Create-React-App with Redux and Hooks. W
 
 ### React Components
 - [Page Components](https://github.com/StreetArtMap/streetArtMap/tree/master/src/pages) | Each Component has it's own test and CSS styling file
+  - e.g. [Camera Page](https://github.com/StreetArtMap/streetArtMap/tree/master/src/pages/CameraPage)
 - [Components](https://github.com/StreetArtMap/streetArtMap/tree/master/src/components) | Each Component has it's own test and CSS styling file
-  - e.g.
+  - e.g. [App Component](https://github.com/StreetArtMap/streetArtMap/blob/master/src/components/App/App.js)
+    - [App Component Unit and Integration Test File](https://github.com/StreetArtMap/streetArtMap/blob/master/src/components/App/App.test.js)
 - [Reusable UI Components](https://github.com/StreetArtMap/streetArtMap/tree/master/src/UIComponents) | Each UI Component has it's own css file
   - e.g. [Loading Spinner Reusable UI Component](https://github.com/StreetArtMap/streetArtMap/tree/master/src/UIComponents/LoadingSpinner)
 - [Redux Setup](https://github.com/StreetArtMap/streetArtMap/blob/master/src/index.js)
 ### Redux
   - [Root Reducer](https://github.com/StreetArtMap/streetArtMap/blob/master/src/reducers/index.js)
     - e.g. [Art Reducer](https://github.com/StreetArtMap/streetArtMap/blob/master/src/reducers/artsReducer.js)
-  - [Reducers test file](https://github.com/StreetArtMap/streetArtMap/blob/master/src/reducers/reducers.test.js)
+  - [Reducers Test File](https://github.com/StreetArtMap/streetArtMap/blob/master/src/reducers/reducers.test.js)
   - [Actions](https://github.com/StreetArtMap/streetArtMap/blob/master/src/actions/actions.js)
-  - [Actions test file](https://github.com/StreetArtMap/streetArtMap/blob/master/src/actions/actions.test.js)
+  - [Actions Test File](https://github.com/StreetArtMap/streetArtMap/blob/master/src/actions/actions.test.js)
+### PWA
+  - [Service Workers](https://github.com/StreetArtMap/streetArtMap/blob/master/public/serviceworker.js)
+### GraphQL with Apollo Client
+  - [Query example](https://github.com/StreetArtMap/streetArtMap/blob/master/src/pages/LoginPage/LoginPage.js)
+  ```
+  import { useQuery, gql } from '@apollo/client'
+  ...
+    const ART_FETCH = gql`
+    query {
+      streetArts {
+        id
+        latitude
+        longitude
+        address
+        city
+        state
+        zipcode
+        imageUrls
+        description
+        artistName
+        artName
+        instagramHandle
+        favorite
+        visited
+        createdAt
+        updatedAt
+        userId
+      }
+    }
+  ...
+  `
+  const { loading, error, data } = useQuery(ART_FETCH)
+  ```
 
 ## Development Implementation Instructions
 
