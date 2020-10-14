@@ -68,8 +68,10 @@ This application was bootstrapped using Create-React-App with Redux and Hooks. W
   - [Query example](https://github.com/StreetArtMap/streetArtMap/blob/master/src/pages/LoginPage/LoginPage.js)
   ```
   import { useQuery, gql } from '@apollo/client'
+
   ...
-    const ART_FETCH = gql`
+
+  const ART_FETCH = gql`
     query {
       streetArts {
         id
@@ -91,9 +93,67 @@ This application was bootstrapped using Create-React-App with Redux and Hooks. W
         userId
       }
     }
-  ...
   `
   const { loading, error, data } = useQuery(ART_FETCH)
+  ```
+  - [Mutation Example](https://github.com/StreetArtMap/streetArtMap/blob/master/src/components/CreateForm/CreateForm.js)
+  ```
+  import { useMutation, gql } from '@apollo/client'
+
+  ...
+
+  const ART_POST = gql`
+    mutation createStreetArt(
+      $userId: Int!
+      $latitude: String!
+      $longitude: String!
+      $address: String!
+      $city: String!
+      $state: String!
+      $zipcode: String!
+      $description: String!
+      $artistName: String!
+      $artName: String!
+      $instagramHandle: String!
+      $imageUrls: String!
+    ) {
+      createStreetArt(
+        input: {
+          userId: $userId
+          latitude: $latitude
+          longitude: $longitude
+          address: $address
+          city: $city
+          state: $state
+          zipcode: $zipcode
+          description: $description
+          artistName: $artistName
+          artName: $artName
+          instagramHandle: $instagramHandle
+          imageUrls: $imageUrls
+        }
+      ) {
+        id
+        latitude
+        longitude
+        address
+        city
+        state
+        zipcode
+        imageUrls
+        description
+        artistName
+        artName
+        instagramHandle
+        favorite
+        visited
+        createdAt
+        updatedAt
+        userId
+      }
+    }
+  `
+  const [createStreetArt, { data, loading, error }] = useMutation(ART_POST)
   ```
 
 ## Development Implementation Instructions
