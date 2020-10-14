@@ -47,9 +47,10 @@ This application was bootstrapped using Create-React-App with Redux and Hooks. W
 
 ## Main Files
 
-[Page Components](https://github.com/StreetArtMap/streetArtMap/tree/master/src/pages) | Each Component has it's own test and CSS styling file
-[Components](https://github.com/StreetArtMap/streetArtMap/tree/master/src/components) | Each Component has it's own test and CSS styling file
-[Reusable UI Components](https://github.com/StreetArtMap/streetArtMap/tree/master/src/UIComponents) | Each UI Component has it's own css file
+- [Page Components](https://github.com/StreetArtMap/streetArtMap/tree/master/src/pages) | Each Component has it's own test and CSS styling file
+- [Components](https://github.com/StreetArtMap/streetArtMap/tree/master/src/components) | Each Component has it's own test and CSS styling file
+  - tets
+- [Reusable UI Components](https://github.com/StreetArtMap/streetArtMap/tree/master/src/UIComponents) | Each UI Component has it's own css file
 
 ## Development Implementation Instructions
 
