@@ -56,6 +56,8 @@ This application was bootstrapped using Create-React-App with Redux and Hooks. W
   - [Root Reducer](https://github.com/StreetArtMap/streetArtMap/blob/master/src/reducers/index.js)
     - e.g. [Art Reducer](https://github.com/StreetArtMap/streetArtMap/blob/master/src/reducers/artsReducer.js)
   - [Reducers test file](https://github.com/StreetArtMap/streetArtMap/blob/master/src/reducers/reducers.test.js)
+  - [Actions](https://github.com/StreetArtMap/streetArtMap/blob/master/src/actions/actions.js)
+  - [Actions test file](https://github.com/StreetArtMap/streetArtMap/blob/master/src/actions/actions.test.js)
 
 ## Development Implementation Instructions
 
